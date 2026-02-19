@@ -3,40 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Barefoot</title>
+<title>¿Duele caminar con suela fina? | Barefoot</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+body{
+  margin:0;
+  background:#fff;
 }
 
-.hero {
-  height: 100vh;
-  background: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.bf-wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+  font-family:Helvetica, Arial, sans-serif;
+  color:#111;
 }
 
-button {
-  padding: 15px 30px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
+.bf-section{ margin-bottom:90px; }
+
+.bf-hero{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.bf-title-xl{
+  font-size:48px;
+  line-height:1.1;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.bf-title-lg{
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:25px;
+  text-align:center;
+}
+
+.bf-text{
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+.bf-btn{
+  display:inline-block;
+  padding:16px 38px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:1px;
+  transition:0.3s;
+}
+
+.bf-btn:hover{ background:#333; }
+
+.bf-grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.bf-grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.bf-box{
+  padding:30px;
+  background:#f6f6f6;
+}
+
+.bf-compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.bf-col{
+  padding:40px;
+}
+
+.bf-col.traditional{ background:#fff2f2; }
+.bf-col.barefoot{ background:#eef7f1; }
+
+.bf-stars{
+  color:#f5a623;
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.bf-testimonial{
+  background:#f9f9f9;
+  padding:30px;
+}
+
+.bf-cta-final{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+
+img{ max-width:100%; display:block; }
+
+@media(max-width:768px){
+  .bf-hero,
+  .bf-grid-2,
+  .bf-grid-3,
+  .bf-compare{
+    grid-template-columns:1fr;
+  }
+
+  .bf-title-xl{ font-size:36px; }
 }
 </style>
-
 </head>
 <body>
 
-<section class="hero">
-  <h1>Sentí el suelo como nunca</h1>
-  <p>Calzado barefoot para movimiento natural.</p>
-  <button>Comprar ahora</button>
+<div class="bf-wrap">
+
+<section class="bf-section bf-hero">
+
+  <div>
+    <h1 class="bf-title-xl">
+      ¿Duele caminar con una suela tan finita?
+    </h1>
+
+    <p class="bf-text">
+      Es la duda más común cuando alguien descubre el calzado barefoot.
+    </p>
+
+    <p class="bf-text">
+      Pero la verdad es esta:
+      <strong>el dolor no viene de la suela fina.</strong>
+      Viene de un pie que perdió sensibilidad.
+    </p>
+
+    <a href="#" class="bf-btn">
+      VER TODA LA COLECCIÓN
+    </a>
+  </div>
+
+  <div>
+    <!-- Reemplazá esta imagen por la que quieras subir -->
+    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Barefoot">
+  </div>
+
+</section>
+
+<section class="bf-section">
+  <h2 class="bf-title-lg">
+    Tus zapatillas tradicionales están haciendo esto:
+  </h2>
+
+  <div class="bf-grid-3">
+    <div class="bf-box">
+      <strong>Comprimen los dedos</strong>
+      <p>Alteran la forma natural del pie.</p>
+    </div>
+    <div class="bf-box">
+      <strong>Elevan el talón</strong>
+      <p>Desalinean postura y sobrecargan rodillas.</p>
+    </div>
+    <div class="bf-box">
+      <strong>Aíslan del suelo</strong>
+      <p>Debilitan músculos y reducen estabilidad.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bf-section bf-grid-2">
+
+  <div>
+    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a">
+  </div>
+
+  <div>
+    <h2 style="font-size:32px; font-weight:700; margin-bottom:20px;">
+      Sentir el suelo no es lastimarse.
+    </h2>
+
+    <p class="bf-text">
+      Las suelas barefoot protegen sin aislar.
+    </p>
+
+    <p class="bf-text">
+      ✔ Ajustás el impacto<br>
+      ✔ Mejorás el equilibrio<br>
+      ✔ Activás reflejos naturales<br>
+      ✔ Caminás más suave
+    </p>
+
+    <p class="bf-text">
+      Más sensación no es más dolor.
+      Es más control.
+    </p>
+
+  </div>
+
+</section>
+
+</div>
+
+<section class="bf-cta-final">
+  <h2 style="font-size:40px; font-weight:700; margin-bottom:25px;">
+    Tu pie no necesita más amortiguación.
+  </h2>
+
+  <p style="font-size:20px; margin-bottom:35px;">
+    Necesita volver a funcionar.
+  </p>
+
+  <a href="#" class="bf-btn">
+    VER TODA LA COLECCIÓN
+  </a>
 </section>
 
 </body>
