@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¿Duele caminar con suela fina? | Barefoot</title>
-
 <style>
-body{
-  margin:0;
-  background:#fff;
-}
-
 .bf-wrap{
   max-width:1100px;
   margin:auto;
@@ -110,8 +98,6 @@ body{
   padding:80px 20px;
 }
 
-img{ max-width:100%; display:block; }
-
 @media(max-width:768px){
   .bf-hero,
   .bf-grid-2,
@@ -119,15 +105,14 @@ img{ max-width:100%; display:block; }
   .bf-compare{
     grid-template-columns:1fr;
   }
-
-  .bf-title-xl{ font-size:36px; }
 }
 </style>
-</head>
-<body>
+
+
 
 <div class="bf-wrap">
 
+<!-- HERO CON IFRAME -->
 <section class="bf-section bf-hero">
 
   <div>
@@ -145,43 +130,61 @@ img{ max-width:100%; display:block; }
       Viene de un pie que perdió sensibilidad.
     </p>
 
-    <a href="#" class="bf-btn">
+    <a href="/collections/todos" class="bf-btn">
       VER TODA LA COLECCIÓN
     </a>
   </div>
 
   <div>
-    <!-- Reemplazá esta imagen por la que quieras subir -->
-    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Barefoot">
+    <!-- IFRAME EMBEBIDO PRODUCTOS -->
+    <div style="position:relative; padding-bottom:75%; height:0; overflow:hidden; border:1px solid #eee;">
+      <iframe 
+        src="https://www.salvajeshoes.com.ar/productos/"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
 
 </section>
 
+
+
+<!-- PROBLEMA -->
 <section class="bf-section">
+
   <h2 class="bf-title-lg">
     Tus zapatillas tradicionales están haciendo esto:
   </h2>
 
   <div class="bf-grid-3">
+
     <div class="bf-box">
       <strong>Comprimen los dedos</strong>
       <p>Alteran la forma natural del pie.</p>
     </div>
+
     <div class="bf-box">
       <strong>Elevan el talón</strong>
       <p>Desalinean postura y sobrecargan rodillas.</p>
     </div>
+
     <div class="bf-box">
       <strong>Aíslan del suelo</strong>
       <p>Debilitan músculos y reducen estabilidad.</p>
     </div>
+
   </div>
+
 </section>
 
+
+
+<!-- EDUCACIÓN -->
 <section class="bf-section bf-grid-2">
 
   <div>
-    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a">
+    <img src="IMAGEN-SUELA-DETALLE.jpg" style="width:100%;">
   </div>
 
   <div>
@@ -209,9 +212,122 @@ img{ max-width:100%; display:block; }
 
 </section>
 
+
+
+<!-- TRANSICIÓN -->
+<section class="bf-section">
+
+  <h2 class="bf-title-lg">
+    ¿Y si sentís molestias al principio?
+  </h2>
+
+  <div class="bf-grid-2">
+
+    <div class="bf-box">
+      <strong>Es adaptación.</strong>
+      <p>Los músculos están despertando después de años dormidos.</p>
+    </div>
+
+    <div class="bf-box">
+      <strong>Hacelo progresivo.</strong>
+      <p>
+        20 minutos al día.<br>
+        Alterná.<br>
+        Aumentá gradualmente.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- COMPARATIVA -->
+<section class="bf-section">
+
+  <h2 class="bf-title-lg">
+    Barefoot vs Tradicional
+  </h2>
+
+  <div class="bf-compare">
+
+    <div class="bf-col traditional">
+      <h3>Zapatilla Tradicional</h3>
+      <p>✘ Dedos comprimidos</p>
+      <p>✘ Talón elevado</p>
+      <p>✘ Suela rígida</p>
+      <p>✘ Dependencia de amortiguación</p>
+    </div>
+
+    <div class="bf-col barefoot">
+      <h3>Barefoot</h3>
+      <p>✔ Dedos libres</p>
+      <p>✔ Postura alineada</p>
+      <p>✔ Movimiento natural</p>
+      <p>✔ Fortalecimiento real</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- TESTIMONIOS -->
+<section class="bf-section">
+
+  <h2 class="bf-title-lg">
+    Pensaron que iba a doler. Hoy no vuelven atrás.
+  </h2>
+
+  <div class="bf-grid-3">
+
+    <div class="bf-testimonial">
+      <div class="bf-stars">★★★★★</div>
+      <p>“Me di cuenta que no era dolor. Era el pie despertando.”</p>
+    </div>
+
+    <div class="bf-testimonial">
+      <div class="bf-stars">★★★★★</div>
+      <p>“Desapareció el dolor al final del día.”</p>
+    </div>
+
+    <div class="bf-testimonial">
+      <div class="bf-stars">★★★★★</div>
+      <p>“Camino más liviano que antes.”</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- GARANTÍA -->
+<section class="bf-section" style="text-align:center;">
+
+  <h2 class="bf-title-lg">
+    Probalo sin riesgo.
+  </h2>
+
+  <p class="bf-text" style="max-width:700px;margin:auto;">
+    Cambios simples. Soporte real.
+  </p>
+
+  <a href="/collections/todos" class="bf-btn">
+    QUIERO PROBAR BAREFOOT
+  </a>
+
+</section>
+
 </div>
 
+
+
+<!-- CTA FINAL -->
 <section class="bf-cta-final">
+
   <h2 style="font-size:40px; font-weight:700; margin-bottom:25px;">
     Tu pie no necesita más amortiguación.
   </h2>
@@ -220,10 +336,8 @@ img{ max-width:100%; display:block; }
     Necesita volver a funcionar.
   </p>
 
-  <a href="#" class="bf-btn">
+  <a href="/collections/todos" class="bf-btn">
     VER TODA LA COLECCIÓN
   </a>
-</section>
 
-</body>
-</html>
+</section>
