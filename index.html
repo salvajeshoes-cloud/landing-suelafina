@@ -1,343 +1,1352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Duele caminar barefoot? La verdad que nadie te contó | Salvaje Shoes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-.bf-wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-  font-family:Helvetica, Arial, sans-serif;
-  color:#111;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.bf-section{ margin-bottom:90px; }
-
-.bf-hero{
-  display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.bf-title-xl{
-  font-size:48px;
-  line-height:1.1;
-  font-weight:700;
-  margin-bottom:25px;
-}
-
-.bf-title-lg{
-  font-size:34px;
-  font-weight:700;
-  margin-bottom:25px;
-  text-align:center;
-}
-
-.bf-text{
-  font-size:18px;
-  line-height:1.7;
-  margin-bottom:20px;
-}
-
-.bf-btn{
-  display:inline-block;
-  padding:16px 38px;
-  background:#000;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  letter-spacing:1px;
-  transition:0.3s;
-}
-
-.bf-btn:hover{ background:#333; }
-
-.bf-grid-2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.bf-grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-
-.bf-box{
-  padding:30px;
-  background:#f6f6f6;
-}
-
-.bf-compare{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-}
-
-.bf-col{
-  padding:40px;
-}
-
-.bf-col.traditional{ background:#fff2f2; }
-.bf-col.barefoot{ background:#eef7f1; }
-
-.bf-stars{
-  color:#f5a623;
-  margin-bottom:15px;
-  font-size:18px;
-}
-
-.bf-testimonial{
-  background:#f9f9f9;
-  padding:30px;
-}
-
-.bf-cta-final{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:80px 20px;
-}
-
-@media(max-width:768px){
-  .bf-hero,
-  .bf-grid-2,
-  .bf-grid-3,
-  .bf-compare{
-    grid-template-columns:1fr;
+  :root {
+    --cream: #FAF7F2;
+    --warm-white: #FFFDF9;
+    --sand: #E8DDD0;
+    --earth: #C4A882;
+    --dark-earth: #8B6F4E;
+    --forest: #4A5C4A;
+    --charcoal: #2C2C2C;
+    --soft-gray: #7A7A7A;
+    --accent: #D4874F;
+    --light-sand: #F2EBE0;
   }
-}
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--warm-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 70% at 80% 50%, rgba(196,168,130,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo-bar {
+    position: absolute;
+    top: 32px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--charcoal);
+  }
+
+  .logo-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .myth-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--light-sand);
+    border: 1px solid var(--sand);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dark-earth);
+    margin-bottom: 32px;
+    width: fit-content;
+    animation: fadeInDown 0.6s ease both;
+  }
+
+  .myth-tag span {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4.5vw, 62px);
+    line-height: 1.1;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+    animation: fadeInUp 0.7s ease 0.15s both;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    line-height: 1.65;
+    max-width: 420px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.7s ease 0.25s both;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: fadeInUp 0.7s ease 0.35s both;
+  }
+
+  .btn-primary {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+
+  .btn-ghost {
+    color: var(--soft-gray);
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--charcoal); }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    animation: scaleIn 1s ease both;
+  }
+
+  .hero-badge {
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
+    background: white;
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+    max-width: 200px;
+    animation: fadeInLeft 0.8s ease 0.5s both;
+  }
+
+  .hero-badge-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .hero-badge-text {
+    font-size: 12px;
+    color: var(--soft-gray);
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--charcoal);
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .stat-item {
+    padding: 28px 48px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    flex: 1;
+    max-width: 280px;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--earth);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+
+  /* ── MYTH BUSTER SECTION ── */
+  .section {
+    padding: 100px 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 3.5vw, 50px);
+    line-height: 1.15;
+    color: var(--charcoal);
+    max-width: 560px;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    max-width: 500px;
+    line-height: 1.7;
+  }
+
+  /* ── MYTH CARDS ── */
+  .myth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--sand);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+
+  .myth-card {
+    background: var(--warm-white);
+    padding: 48px 44px;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .myth-card:hover { background: var(--light-sand); }
+
+  .myth-card-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--sand);
+    line-height: 1;
+    position: absolute;
+    top: 24px;
+    right: 36px;
+  }
+
+  .myth-label {
+    display: inline-block;
+    background: #FDEEE4;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  .truth-label {
+    display: inline-block;
+    background: #EBF2EB;
+    color: var(--forest);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  .myth-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .myth-card p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    line-height: 1.7;
+  }
+
+  /* ── SCIENCE SECTION ── */
+  .science-section {
+    background: var(--light-sand);
+    padding: 100px 80px;
+  }
+
+  .science-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .science-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+  }
+
+  .science-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .science-img-badge {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background: white;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--forest);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .science-points {
+    list-style: none;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .science-point {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .science-icon {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  .science-point h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+
+  .science-point p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    line-height: 1.6;
+  }
+
+  /* ── TRANSITION GUIDE ── */
+  .transition-section {
+    padding: 100px 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .steps-timeline {
+    margin-top: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: stretch;
+    padding-bottom: 48px;
+    position: relative;
+  }
+
+  .step-row:last-child { padding-bottom: 0; }
+
+  .step-num-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-num {
+    width: 52px;
+    height: 52px;
+    background: var(--charcoal);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .step-line {
+    width: 1px;
+    flex: 1;
+    background: var(--sand);
+    margin-top: 8px;
+  }
+
+  .step-row:last-child .step-line { display: none; }
+
+  .step-content {
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+
+  .step-week {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .step-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+
+  .step-content p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    line-height: 1.7;
+    max-width: 580px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    background: var(--charcoal);
+    padding: 100px 80px;
+  }
+
+  .testimonials-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .testimonials-section .section-label { color: var(--earth); }
+  .testimonials-section .section-title { color: white; }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+  }
+
+  .testimonial-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px 28px;
+    transition: background 0.2s;
+  }
+
+  .testimonial-card:hover { background: rgba(255,255,255,0.09); }
+
+  .stars {
+    color: var(--earth);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--dark-earth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .author-detail {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  /* ── PRODUCTS ── */
+  .products-section {
+    padding: 100px 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+  }
+
+  .product-card {
+    background: var(--warm-white);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+
+  .product-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--light-sand);
+  }
+
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    display: block;
+  }
+
+  .product-card:hover .product-img img { transform: scale(1.05); }
+
+  .product-info {
+    padding: 20px 22px 24px;
+  }
+
+  .product-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--earth);
+    margin-bottom: 6px;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+
+  .product-desc {
+    font-size: 13px;
+    color: var(--soft-gray);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .product-arrow {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ── FAQ ── */
+  .faq-section {
+    background: var(--light-sand);
+    padding: 100px 80px;
+  }
+
+  .faq-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .faq-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 22px 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--charcoal);
+    transition: background 0.2s;
+  }
+
+  .faq-question:hover { background: var(--light-sand); }
+
+  .faq-chevron {
+    font-size: 12px;
+    color: var(--soft-gray);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .faq-item.open .faq-answer { max-height: 300px; }
+
+  .faq-answer-inner {
+    padding: 0 24px 22px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    line-height: 1.7;
+  }
+
+  .faq-cta-box {
+    background: var(--charcoal);
+    border-radius: 20px;
+    padding: 48px 40px;
+    color: white;
+    position: sticky;
+    top: 100px;
+  }
+
+  .faq-cta-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .faq-cta-box p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .btn-accent {
+    background: var(--accent);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .btn-accent:hover { opacity: 0.88; transform: translateY(-2px); }
+
+  .trust-badges {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    padding: 120px 80px;
+    text-align: center;
+    background: var(--warm-white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(212,135,79,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .final-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.15;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    color: var(--charcoal);
+  }
+
+  .final-cta p {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--soft-gray);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+  }
+
+  .final-cta-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.5);
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  footer .logo-wordmark { color: rgba(255,255,255,0.8); }
+
+  footer a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: white; }
+
+  footer nav { display: flex; gap: 24px; flex-wrap: wrap; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(1.04); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 100px 32px 60px; }
+    .logo-bar { left: 32px; }
+    .hero-right { aspect-ratio: 4/3; }
+    .hero-badge { display: none; }
+    .stats-bar { flex-wrap: wrap; }
+    .stat-item { flex: 1 1 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .section, .transition-section, .products-section { padding: 64px 32px; }
+    .science-section, .testimonials-section, .faq-section, .final-cta { padding: 64px 32px; }
+    footer { padding: 32px; flex-direction: column; align-items: flex-start; }
+    .myth-grid { grid-template-columns: 1fr; }
+    .science-inner, .faq-inner { grid-template-columns: 1fr; gap: 40px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .step-row { grid-template-columns: 52px 1fr; gap: 20px; }
+    .final-cta { padding: 80px 32px; }
+  }
+
+  @media (max-width: 560px) {
+    .products-grid { grid-template-columns: 1fr; }
+  }
 </style>
+</head>
+<body>
 
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="logo-bar">
+      <span class="logo-wordmark">SALVAJE<span class="logo-dot"></span></span>
+    </div>
 
+    <div class="myth-tag"><span></span> Desmitificando el barefoot</div>
 
-<div class="bf-wrap">
-
-<!-- HERO CON IFRAME -->
-<section class="bf-section bf-hero">
-
-  <div>
-    <h1 class="bf-title-xl">
-      ¿Duele caminar con una suela tan finita?
+    <h1 class="hero-headline">
+      "¿No duele caminar<br>con una suela <em>tan fina</em>?"
     </h1>
 
-    <p class="bf-text">
-      Es la duda más común cuando alguien descubre el calzado barefoot.
+    <p class="hero-sub">
+      La respuesta corta: no. La respuesta larga: es exactamente al revés. Tu cuerpo ya sabe cómo caminar — solo necesita que le saques las muletas.
     </p>
 
-    <p class="bf-text">
-      Pero la verdad es esta:
-      <strong>el dolor no viene de la suela fina.</strong>
-      Viene de un pie que perdió sensibilidad.
-    </p>
-
-    <a href="/collections/todos" class="bf-btn">
-      VER TODA LA COLECCIÓN
-    </a>
-  </div>
-
-  <div>
-    <!-- IFRAME EMBEBIDO PRODUCTOS -->
-    <div style="position:relative; padding-bottom:75%; height:0; overflow:hidden; border:1px solid #eee;">
-      <iframe 
-        src="https://www.salvajeshoes.com.ar/productos/"
-        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-        loading="lazy">
-      </iframe>
+    <div class="hero-cta-group">
+      <a href="https://www.salvajeshoes.com.ar/productos/" target="_blank" class="btn-primary">Ver colección</a>
+      <a href="#mitos" class="btn-ghost">Quiero entender más ↓</a>
     </div>
   </div>
 
+  <div class="hero-right">
+    <img
+      src="https://acdn-us.mitiendanube.com/stores/005/877/397/themes/common/logo-1918409039-1759776123-e64634912a4f5656b8e5e93a9f15bd9c1759776123-480-0.webp"
+      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=80&auto=format&fit=crop'"
+      alt="Zapatillas Salvaje barefoot"
+      style="width:100%; height:100%; object-fit:cover;"
+    >
+    <div class="hero-badge">
+      <div class="hero-badge-number">+12K</div>
+      <div class="hero-badge-text">personas ya caminan con pies libres en Argentina</div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- PROBLEMA -->
-<section class="bf-section">
-
-  <h2 class="bf-title-lg">
-    Tus zapatillas tradicionales están haciendo esto:
-  </h2>
-
-  <div class="bf-grid-3">
-
-    <div class="bf-box">
-      <strong>Comprimen los dedos</strong>
-      <p>Alteran la forma natural del pie.</p>
-    </div>
-
-    <div class="bf-box">
-      <strong>Elevan el talón</strong>
-      <p>Desalinean postura y sobrecargan rodillas.</p>
-    </div>
-
-    <div class="bf-box">
-      <strong>Aíslan del suelo</strong>
-      <p>Debilitan músculos y reducen estabilidad.</p>
-    </div>
-
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-number">0mm</span>
+    <span class="stat-label">Caída talón-punta (zero drop)</span>
   </div>
-
-</section>
-
-
-
-<!-- EDUCACIÓN -->
-<section class="bf-section bf-grid-2">
-
-  <div>
-    <img src="IMAGEN-SUELA-DETALLE.jpg" style="width:100%;">
+  <div class="stat-item">
+    <span class="stat-number">4–6mm</span>
+    <span class="stat-label">Grosor de suela flexible</span>
   </div>
-
-  <div>
-    <h2 style="font-size:32px; font-weight:700; margin-bottom:20px;">
-      Sentir el suelo no es lastimarse.
-    </h2>
-
-    <p class="bf-text">
-      Las suelas barefoot protegen sin aislar.
-    </p>
-
-    <p class="bf-text">
-      ✔ Ajustás el impacto<br>
-      ✔ Mejorás el equilibrio<br>
-      ✔ Activás reflejos naturales<br>
-      ✔ Caminás más suave
-    </p>
-
-    <p class="bf-text">
-      Más sensación no es más dolor.
-      Es más control.
-    </p>
-
+  <div class="stat-item">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Espacio para los dedos</span>
   </div>
-
-</section>
-
-
-
-<!-- TRANSICIÓN -->
-<section class="bf-section">
-
-  <h2 class="bf-title-lg">
-    ¿Y si sentís molestias al principio?
-  </h2>
-
-  <div class="bf-grid-2">
-
-    <div class="bf-box">
-      <strong>Es adaptación.</strong>
-      <p>Los músculos están despertando después de años dormidos.</p>
-    </div>
-
-    <div class="bf-box">
-      <strong>Hacelo progresivo.</strong>
-      <p>
-        20 minutos al día.<br>
-        Alterná.<br>
-        Aumentá gradualmente.
-      </p>
-    </div>
-
+  <div class="stat-item">
+    <span class="stat-number">12K+</span>
+    <span class="stat-label">Clientes en Argentina</span>
   </div>
-
-</section>
-
-
-
-<!-- COMPARATIVA -->
-<section class="bf-section">
-
-  <h2 class="bf-title-lg">
-    Barefoot vs Tradicional
-  </h2>
-
-  <div class="bf-compare">
-
-    <div class="bf-col traditional">
-      <h3>Zapatilla Tradicional</h3>
-      <p>✘ Dedos comprimidos</p>
-      <p>✘ Talón elevado</p>
-      <p>✘ Suela rígida</p>
-      <p>✘ Dependencia de amortiguación</p>
-    </div>
-
-    <div class="bf-col barefoot">
-      <h3>Barefoot</h3>
-      <p>✔ Dedos libres</p>
-      <p>✔ Postura alineada</p>
-      <p>✔ Movimiento natural</p>
-      <p>✔ Fortalecimiento real</p>
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- TESTIMONIOS -->
-<section class="bf-section">
-
-  <h2 class="bf-title-lg">
-    Pensaron que iba a doler. Hoy no vuelven atrás.
-  </h2>
-
-  <div class="bf-grid-3">
-
-    <div class="bf-testimonial">
-      <div class="bf-stars">★★★★★</div>
-      <p>“Me di cuenta que no era dolor. Era el pie despertando.”</p>
-    </div>
-
-    <div class="bf-testimonial">
-      <div class="bf-stars">★★★★★</div>
-      <p>“Desapareció el dolor al final del día.”</p>
-    </div>
-
-    <div class="bf-testimonial">
-      <div class="bf-stars">★★★★★</div>
-      <p>“Camino más liviano que antes.”</p>
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- GARANTÍA -->
-<section class="bf-section" style="text-align:center;">
-
-  <h2 class="bf-title-lg">
-    Probalo sin riesgo.
-  </h2>
-
-  <p class="bf-text" style="max-width:700px;margin:auto;">
-    Cambios simples. Soporte real.
-  </p>
-
-  <a href="/collections/todos" class="bf-btn">
-    QUIERO PROBAR BAREFOOT
-  </a>
-
-</section>
-
 </div>
 
 
+<!-- ── MITOS ── -->
+<div id="mitos">
+<section class="section">
+  <p class="section-label reveal">El mito vs. la realidad</p>
+  <h2 class="section-title reveal">Lo que creés que sabés sobre el calzado... no es así.</h2>
+  <p class="section-sub reveal">La industria del calzado convencional lleva décadas diciéndonos que necesitamos más acolchado, más soporte, más arco. La ciencia dice otra cosa.</p>
 
-<!-- CTA FINAL -->
-<section class="bf-cta-final">
+  <div class="myth-grid reveal">
 
-  <h2 style="font-size:40px; font-weight:700; margin-bottom:25px;">
-    Tu pie no necesita más amortiguación.
-  </h2>
+    <div class="myth-card">
+      <div class="myth-card-number">01</div>
+      <div class="myth-label">❌ El mito</div>
+      <h3>"Una suela fina duele porque no tiene amortiguación"</h3>
+      <p>La lógica parece obvia: más goma = más protección. Pero cuando el pie siente el suelo, ajusta automáticamente su impacto. Con zapatillas muy acolchadas, golpeás más fuerte sin darte cuenta.</p>
+    </div>
 
-  <p style="font-size:20px; margin-bottom:35px;">
-    Necesita volver a funcionar.
-  </p>
+    <div class="myth-card">
+      <div class="myth-card-number">02</div>
+      <div class="truth-label">✓ La realidad</div>
+      <h3>El pie descalzo naturalmente no duele</h3>
+      <p>Los receptores en la planta del pie te protegen. Con barefoot, tu cerebro recibe información real del suelo y ajusta cada paso. Caminás más suave, no más fuerte. El dolor aparece cuando la transición es brusca — no por la suela en sí.</p>
+    </div>
 
-  <a href="/collections/todos" class="bf-btn">
-    VER TODA LA COLECCIÓN
-  </a>
+    <div class="myth-card">
+      <div class="myth-card-number">03</div>
+      <div class="myth-label">❌ El mito</div>
+      <h3>"Necesitás soporte de arco o te lastimás"</h3>
+      <p>Se nos vendió la idea de que el arco plantar es "débil" y necesita apoyo externo. Pero el arco es un mecanismo de resorte perfecto. Al sostenerlo artificialmente, los músculos se atrofian.</p>
+    </div>
 
+    <div class="myth-card">
+      <div class="myth-card-number">04</div>
+      <div class="truth-label">✓ La realidad</div>
+      <h3>El arco se fortalece cuando trabaja</h3>
+      <p>Estudios muestran que usar soporte de arco por años debilita la musculatura intrínseca del pie. El barefoot activa esa musculatura dormida y construye un arco más fuerte con el tiempo — igual que un músculo que se ejercita.</p>
+    </div>
+
+  </div>
 </section>
+</div>
+
+<!-- ── CIENCIA ── -->
+<section class="science-section">
+  <div class="science-inner">
+    <div class="science-img-wrap reveal">
+      <img
+        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80&auto=format&fit=crop"
+        alt="Anatomía del pie descalzo"
+      >
+      <div class="science-img-badge">🦶 Anatomía natural del pie</div>
+    </div>
+
+    <div>
+      <p class="section-label reveal">La ciencia detrás</p>
+      <h2 class="section-title reveal">Tu pie tiene 26 huesos, 33 articulaciones y 100 músculos.<br>No los estés silenciando.</h2>
+
+      <ul class="science-points reveal">
+        <li class="science-point">
+          <div class="science-icon">🎯</div>
+          <div>
+            <h4>Propiocepción mejorada</h4>
+            <p>La planta del pie tiene miles de receptores nerviosos. Una suela fina los activa todos, mejorando tu equilibrio y coordinación con cada paso.</p>
+          </div>
+        </li>
+        <li class="science-point">
+          <div class="science-icon">💪</div>
+          <div>
+            <h4>Músculos que vuelven a trabajar</h4>
+            <p>Los músculos intrínsecos del pie — que el calzado convencional mantiene inactivos — se fortalecen progresivamente. Menos fascitis, menos dolor de rodilla.</p>
+          </div>
+        </li>
+        <li class="science-point">
+          <div class="science-icon">📐</div>
+          <div>
+            <h4>Zero drop = alineación correcta</h4>
+            <p>El talón elevado inclina la pelvis hacia adelante y tensiona la cadena posterior. Con zero drop, columna, cadera y rodillas se alinean naturalmente.</p>
+          </div>
+        </li>
+        <li class="science-point">
+          <div class="science-icon">🌿</div>
+          <div>
+            <h4>Caja para los dedos ancha</h4>
+            <p>Los dedos se separan naturalmente, mejoran el equilibrio y previenen el hallux valgus (juanete). Tu pie puede ser lo que evolutivamente está diseñado para ser.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRANSICIÓN ── -->
+<section class="transition-section">
+  <p class="section-label reveal">¿Cómo empezar?</p>
+  <h2 class="section-title reveal">La clave no es la suela. Es la transición.</h2>
+  <p class="section-sub reveal">El 95% de las personas que "tuvieron dolor con barefoot" lo hicieron mal: pasaron de golpe. Estos son los pasos correctos.</p>
+
+  <div class="steps-timeline">
+
+    <div class="step-row reveal">
+      <div class="step-num-wrap">
+        <div class="step-num">1</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-week">Semanas 1–2</div>
+        <h3>Empezá de a poco: 30 min al día</h3>
+        <p>No reemplaces tus zapatillas de golpe. Usá el barefoot en caminatas cortas o en casa. Tu musculatura plantar necesita despertarse de años de inactividad.</p>
+      </div>
+    </div>
+
+    <div class="step-row reveal">
+      <div class="step-num-wrap">
+        <div class="step-num">2</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-week">Semanas 3–6</div>
+        <h3>Aumentá el tiempo gradualmente</h3>
+        <p>Si no sentís dolor ni molestia, sumá tiempo de uso progresivamente. Algunos ejercicios simples de estiramiento de pantorrillas aceleran la adaptación.</p>
+      </div>
+    </div>
+
+    <div class="step-row reveal">
+      <div class="step-num-wrap">
+        <div class="step-num">3</div>
+        <div class="step-line"></div>
+      </div>
+      <div class="step-content">
+        <div class="step-week">A partir del mes 2</div>
+        <h3>Uso completo y sin restricciones</h3>
+        <p>En este punto la mayoría de los clientes nos dicen que no pueden volver al calzado convencional. El mundo con pies libres es otro. Y no tiene vuelta atrás.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TESTIMONIOS ── -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <p class="section-label reveal">Comunidad Salvaje</p>
+    <h2 class="section-title reveal">Lo que pasó cuando se animaron</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Tenía fascitis plantar hace 3 años. Los médicos me decían que use plantillas. A los 2 meses de Salvaje, el dolor desapareció. No lo puedo creer todavía."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div>
+            <div class="author-name">Martín G.</div>
+            <div class="author-detail">Rosario · usuario hace 8 meses</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Al principio tenía miedo de que doliera. La transición la hice bien y en 3 semanas ya las usaba todo el día. Mis rodillas dejaron de molestarme."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">L</div>
+          <div>
+            <div class="author-name">Laura P.</div>
+            <div class="author-detail">CABA · usuaria hace 1 año</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Empecé por estética, me quedé por la sensación. Los pies se me fortalecieron, camino diferente. Ni me acuerdo lo que era un juanete en formación."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div>
+            <div class="author-name">Carolina M.</div>
+            <div class="author-detail">Mendoza · usuaria hace 6 meses</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTOS ── -->
+<section class="products-section">
+  <p class="section-label reveal">Nuestra colección</p>
+  <h2 class="section-title reveal">Elegí el modelo que se adapta a tu vida</h2>
+  <p class="section-sub reveal">Todos con suela de 4–6mm, zero drop, caja para los dedos ancha y materiales respetuosos.</p>
+
+  <div class="products-grid">
+
+    <a href="https://www.salvajeshoes.com.ar/deportivas/" target="_blank" class="product-card reveal">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80&auto=format&fit=crop" alt="Deportivas Barefoot">
+      </div>
+      <div class="product-info">
+        <div class="product-tag">Para el movimiento</div>
+        <div class="product-name">Deportivas</div>
+        <p class="product-desc">Trail running, gimnasio y trekking. Máximo contacto con el suelo sin sacrificar protección.</p>
+        <div class="product-arrow">Ver modelos →</div>
+      </div>
+    </a>
+
+    <a href="https://www.salvajeshoes.com.ar/casuales/" target="_blank" class="product-card reveal">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80&auto=format&fit=crop" alt="Casuales Barefoot">
+      </div>
+      <div class="product-info">
+        <div class="product-tag">Para el día a día</div>
+        <div class="product-name">Casuales</div>
+        <p class="product-desc">Usálas en la ciudad, en el trabajo o el fin de semana. Estilo que no le dice nada al pie.</p>
+        <div class="product-arrow">Ver modelos →</div>
+      </div>
+    </a>
+
+    <a href="https://www.salvajeshoes.com.ar/botasbarefoot/" target="_blank" class="product-card reveal">
+      <div class="product-img">
+        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80&auto=format&fit=crop" alt="Botitas Barefoot">
+      </div>
+      <div class="product-info">
+        <div class="product-tag">Para el frío</div>
+        <div class="product-name">Botitas</div>
+        <p class="product-desc">Para el invierno argentino. Abrigadas, waterproof y con toda la filosofía barefoot intacta.</p>
+        <div class="product-arrow">Ver modelos →</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div>
+      <p class="section-label reveal">Preguntas frecuentes</p>
+      <h2 class="section-title reveal">Todo lo que te estás preguntando</h2>
+
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Puedo usarlas si tengo pie plano?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">El pie plano muchas veces es consecuencia de años de soporte artificial que atrofió la musculatura. El barefoot, con una transición gradual, puede ser parte del proceso de fortalecimiento. Te recomendamos empezar con pocos minutos diarios y consultar con un podólogo si tenés dudas específicas.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Cuánto tarda la adaptación?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Depende de cada persona y del calzado que usaste toda la vida. En general, entre 4 y 8 semanas de uso progresivo son suficientes para que el cuerpo se adapte completamente. Lo importante es no apurarte.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Sirven para correr?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sí, tenemos modelos específicos para trail running y gimnasio. La clave es también adaptar la pisada: con barefoot tendés a caer con la parte media del pie, no con el talón. Eso reduce el impacto articular significativamente.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Tienen envío a todo el país?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sí, enviamos a todo Argentina con Correo Argentino y servicios privados. El envío gratis aplica a todos los productos. Podés calcular el costo y tiempo estimado en el checkout.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            ¿Y si no me convencen? ¿Puedo cambiarlas?
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sí. Tenemos política de cambios y devoluciones. Podés cambiarte de talle o modelo si el producto está en condiciones. Revisá todos los detalles en nuestra página de cambios y devoluciones.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+      <div class="faq-cta-box reveal">
+        <h3>Probá el barefoot sin riesgo</h3>
+        <p>Envío gratis a todo el país. Garantía de suela por 1 año. Comunidad de más de 12.000 personas que ya caminan diferente.</p>
+        <a href="https://www.salvajeshoes.com.ar/productos/" target="_blank" class="btn-accent">Elegir mi modelo →</a>
+        <div class="trust-badges">
+          <span class="trust-badge">✓ Envío gratis</span>
+          <span class="trust-badge">✓ Garantía 1 año</span>
+          <span class="trust-badge">✓ 6 cuotas sin interés</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta">
+  <p class="section-label" style="text-align:center; margin-bottom:16px;">¿Listo para dar el primer paso?</p>
+  <h2 class="reveal">Tus pies saben cómo caminar.<br>Solo hay que <em style="font-style:italic; color:var(--accent);">dejarlos.</em></h2>
+  <p class="reveal">Sumate a la comunidad barefoot más grande de Argentina. Tu cuerpo tiene 2 millones de años de evolución caminando descalzo — nosotros solo hacemos la zapatilla que respeta eso.</p>
+  <div class="final-cta-btns reveal">
+    <a href="https://www.salvajeshoes.com.ar/productos/" target="_blank" class="btn-primary" style="font-size:15px; padding: 18px 40px;">Ver toda la colección</a>
+    <a href="https://www.salvajeshoes.com.ar/guia-de-talles/" target="_blank" class="btn-ghost" style="font-size:14px;">Guía de talles</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="logo-wordmark">SALVAJE<span class="logo-dot"></span></span>
+  <nav>
+    <a href="https://www.salvajeshoes.com.ar/productos/" target="_blank">Productos</a>
+    <a href="https://www.salvajeshoes.com.ar/blog/" target="_blank">Blog</a>
+    <a href="https://www.salvajeshoes.com.ar/guia-de-talles/" target="_blank">Guía de talles</a>
+    <a href="https://www.salvajeshoes.com.ar/cambios-y-devoluciones/" target="_blank">Cambios y devoluciones</a>
+  </nav>
+  <span style="font-size:12px;">© 2026 Salvaje Shoes · Calzado Barefoot en Argentina</span>
+</footer>
+
+<script>
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        // stagger siblings in same parent
+        const siblings = Array.from(e.target.parentElement.querySelectorAll('.reveal'));
+        const idx = siblings.indexOf(e.target);
+        setTimeout(() => e.target.classList.add('visible'), idx * 80);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
