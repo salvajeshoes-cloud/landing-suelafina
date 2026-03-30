@@ -23,7 +23,11 @@
     --light-sand: #F2EBE0;
   }
 
+  /* ── OCULTAR SCROLLBAR (para que no aparezca la barrita en el iframe) ── */
+  html::-webkit-scrollbar { display: none; }
   html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
